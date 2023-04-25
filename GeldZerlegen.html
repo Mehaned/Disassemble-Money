@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Geld zerlegen</title>
+</head>
+<body>
+
+<script>
+    //<![CDATA[
+    "use strict";
+    let geld = prompt("Bitte geben Sie einen ganzen Geldbetrag ein:");
+
+    document.write("<h2>Geldzerlegung von " + geld + " Euro:</h2>");
+    document.write("<p>" + Math.floor(geld / 500) + " mal 500 Euro.</p>");  // floor liefert ganzzahligen Anteil
+    geld = geld % 500;                                                      // % ist Modulo
+    document.write("<p>" + Math.floor(geld / 200) + " mal 200 Euro.</p>");
+    geld = geld % 200;
+    document.write("<p>" + Math.floor(geld / 100) + " mal 100 Euro.</p>");
+    geld = geld % 100;
+    document.write("<p>" + Math.floor(geld / 50) + " mal 50 Euro.</p>");
+    geld = geld % 50;
+    document.write("<p>" + Math.floor(geld / 20) + " mal 20 Euro.</p>");
+    geld = geld % 20;
+    document.write("<p>" + Math.floor(geld / 10) + " mal 10 Euro.</p>");
+    geld = geld % 10;
+    document.write("<p>" + Math.floor(geld / 5) + " mal 5 Euro.</p>");
+    geld = geld % 5;
+    document.write("<p>" + Math.floor(geld / 2) + " mal 2 Euro.</p>");
+    geld = geld % 2;
+    document.write("<p>" + Math.floor(geld) + " mal 1 Euro.</p>");
+
+    //]]>
+</script>
+
+</body>
+</html>
